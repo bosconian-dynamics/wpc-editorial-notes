@@ -3,13 +3,21 @@
  * Plugin Name:       WPC Editorial Notes
  * Plugin URI:        https://github.com/bosconian-dynamics/wpc-editorial-notes
  * Description:       Adds a basic section for notes to the Document Settings sidebar in the Block Editor. Notes are stored in post meta.
- * Version:           0.1.0
+ * Version:           0.2.0
  * Requires at least: 5.2
  * Requires PHP:      7.2
- * Author:            Adam Bosco
+ * Author:            Adam Bosco <wordpress@adambos.co>
  * License:           MIT
  */
 namespace BosconianDynamics\WPCEditorialNotes;
+
+require_once __DIR__ . '/vendor/autoload.php';
+
+\Puc_v4_Factory::buildUpdateChecker(
+	'https://github.com/bosconian-dynamics/wpc-editorial-notes/',
+	__FILE__,
+	'wpc-editorial-notes'
+);
 
 function register_assets() {
   $asset_file = include( plugin_dir_path( __FILE__ ) . 'build/index.asset.php');

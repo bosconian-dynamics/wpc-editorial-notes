@@ -1,6 +1,6 @@
 {
   "name": "wpc-editorial-notes",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple WordPress plugin to add a notes section to the block editor.",
   "main": "index.js",
   "scripts": {
